@@ -1,0 +1,11 @@
+---
+layout: base
+---
+
+{% assign authors = site.authors %}
+{% for author in authors %}
+    <div class="card">
+        <small>{{ author.date | date_to_string }}</small>
+        <h2><a href="{{ author.url }}">{{ author.title }}</a></h2>
+    </div>
+{% endfor %}

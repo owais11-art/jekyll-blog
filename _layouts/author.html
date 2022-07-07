@@ -1,0 +1,27 @@
+---
+layout: base
+---
+
+<div class="post-head">
+    <small>short name: {{ page.short_name }}</small><br>
+    <small>Position: {{ page.position }}</small>
+    <h2>{{ page.name }}</h2>
+</div>
+{% assign posts = site.posts | where: 'author', page.short_name %}
+{% for post in posts %}
+    <div class="card">
+        <small>{{ post.date | date_to_string }}</small>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt }}</p>
+        <a href="{{ post.url }}" class="read-more">Read more</a>
+    </div>
+{% endfor %}
+<h3 style="text-align: center; margin-top: 20px;">Connect with Author</h3>
+<div class="social">
+    {% assign socials = site.data.socials %}
+    {% for social in socials %}
+        <div class="social-icon">
+            <i class="{{ social.class }} {{ social.name }}"></i>
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,109 @@
+@import 'reset';
+
+
+.active,
+.read-more{
+    display: block;
+    padding: 8px;
+    background: rgb(22, 165, 22);
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+.read-more{
+    display: inline;
+}
+
+// Navigation styles
+
+.navigation{
+    width: 100%;
+    padding: 20px;
+    background: #ccc;
+    .nav-items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .nav-item{
+            padding: 0 10px;
+        }
+        .nav-item:first-child{
+            padding-left: 0;
+        }
+        .nav-item:last-child{
+            padding-right: 0;
+        }
+    }
+}
+
+// Archive-styles
+
+.card{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 65%;
+    margin: 0 auto;
+    margin-top: 10px;
+    background: #f6f6f6;
+    h2, p{
+        margin-top: 10px;
+    }
+    p{
+        line-height: 1.5rem;
+    }
+    small{
+        color: #ccc;
+    }
+}
+
+//Post styles
+
+.post-head{
+    @extend .card;
+    h2{
+        margin-top: 20px;
+    }
+}
+
+.post-content{
+    @extend .card;
+    p{
+        font-size: 14px;
+    }
+}
+
+.social{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    .social-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        i{
+            font-size: 22px;
+            transition: transform .5s, color .5s;
+        }
+        i:hover{
+            transform: scale(1.5) rotate(360deg);
+        }
+        .facebook:hover{
+            color: #4267B2;
+        }
+        .twitter:hover{
+            color:  #00acee;
+        }
+        .youtube:hover{
+            color: #FF0000;
+        }
+        .instagram:hover{
+            color: #bc2a8d;
+        }
+    }
+}

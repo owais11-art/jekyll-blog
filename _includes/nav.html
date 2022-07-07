@@ -1,0 +1,17 @@
+<nav class="navigation">
+    <ul class="nav-items">
+        <!-- 👇assigning value to variable in liquid -->
+        {% assign data = site.data.nav %}
+        {% for item in data %}
+            <li class="nav-item">
+                <a href="{{ item.link }}"
+                {% if item.link == page.url %}
+                    class="active"
+                {% endif %}
+                >
+                    {{ item.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

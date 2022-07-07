@@ -1,0 +1,8 @@
+- name: facebook
+  class: bi bi-facebook
+- name: twitter
+  class: bi bi-twitter
+- name: youtube
+  class: bi bi-youtube
+- name: instagram
+  class: bi bi-instagram
