@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p, ul, li{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+}

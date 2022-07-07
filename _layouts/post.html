@@ -1,0 +1,15 @@
+---
+layout: base
+---
+{% for author in site.authors %}
+    {% if author.short_name == page.author %}
+        {% assign author_url = author.url %}
+    {% endif %}
+{% endfor %}
+<div class="post-head">
+    <small>{{ page.date | date_to_string }} - <a href="{{ author_url }}">{{ page.author }}</a></small>
+    <h2>{{ page.title }}</h2>
+</div>
+<div class="post-content">
+    <p>{{ content }}</p>
+</div>
